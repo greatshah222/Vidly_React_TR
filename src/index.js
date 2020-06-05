@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 // this is in the node modules folder
-import 'font-awesome/css/font-awesome.css';
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

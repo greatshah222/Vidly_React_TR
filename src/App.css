@@ -38,13 +38,13 @@
 }
 
 .tableMovies table {
-  width: 80%;
+  width: 60%;
   padding: 10px 10px;
   margin: auto;
 }
 .tableMovies td {
-  padding: 40px;
-  border: 1px solid #dddddd;
+  padding: 20px 30px;
+  border-bottom: 1px solid black;
   text-align: left;
 }
 
