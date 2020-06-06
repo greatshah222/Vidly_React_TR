@@ -36,21 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-.tableMovies table {
-  width: 60%;
-  padding: 10px 10px;
-  margin: auto;
-}
-.tableMovies td {
-  padding: 20px 30px;
-  border-bottom: 1px solid black;
-  text-align: left;
-}
-
-.delete-movie {
-  padding: 6px 15px;
-  background-color: rgba(255, 0, 0, 0.904);
-  color: white;
-  cursor: pointer;
-}

@@ -1,5 +1,14 @@
 import React from 'react';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
+
+// fo rbugChecking we need to install a libray called PropTypes from npm
+// npm i prop-types
+
+// Greeting.propTypes = {
+//     name: PropTypes.string
+//   };
+//   PropTypes exports a range of validators that can be used to make sure the data you receive is valid. In this example, we’re using PropTypes.string. When an invalid value is provided for a prop, a warning will be shown in the JavaScript console. For performance reasons, propTypes is only checked in development mode.
 
 export default function Pagination({
   itemsCount,
@@ -7,7 +16,6 @@ export default function Pagination({
   onPageChange,
   currentPage,
 }) {
-  console.log(currentPage);
   const pagesCount = itemsCount / pageSize;
   // this is just a single num. fo rexample if there are 8 movies then the pagesCOUNT WILL BE 2 SINCE THE PAGESIZE IS 4.
   // now we need tomap from 1 to pagesCount(used lodash package so npm i lodash)
@@ -36,3 +44,10 @@ export default function Pagination({
     return null;
   }
 }
+// just for checking we have passed the right thing as props we need propTypes
+Pagination.propTypes = {
+  itemsCount: PropTypes.number.isRequired,
+  pageSize: PropTypes.number.isRequired,
+  onPageChange: PropTypes.func.isRequired,
+  currentPage: PropTypes.number.isRequired,
+};

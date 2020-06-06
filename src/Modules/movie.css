@@ -21,3 +21,60 @@
   background-color: blue;
   color: white;
 }
+
+.tableMovies table {
+  padding: 10px 10px;
+  margin: auto;
+}
+.tableMovies td {
+  padding: 20px 30px;
+  border-bottom: 1px solid black;
+  text-align: left;
+}
+.table-heading-primary {
+  padding: 10px 10px;
+  cursor: pointer;
+}
+.delete-movie {
+  padding: 6px 15px;
+  background-color: rgba(255, 0, 0, 0.904);
+  color: white;
+  cursor: pointer;
+}
+
+.movies-primary {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+}
+.vertical-navbar {
+  width: 20%;
+  padding: 10px 10px;
+  margin: 20px auto;
+}
+.tableMovies {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  margin: 0 auto;
+}
+.vertical-navbar ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  /* align-items: center;
+  justify-content: space-around; */
+}
+.vertical-navbar ul li {
+  padding: 20px 10px;
+  width: 80%;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.vertical-navbar ul li.active {
+  background-color: blue;
+  color: white;
+}
+.vertical-navbar ul li:hover {
+  background-color: rgba(0, 0, 255, 0.274);
+}

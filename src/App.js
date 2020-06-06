@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Movies from './components/Movies';
-import Counters from './components/Counters';
+// import Counters from './components/Counters';
 import NavBar from './components/NavBar';
 
 class App extends Component {
