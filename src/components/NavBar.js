@@ -1,15 +1,20 @@
 import React from 'react';
 import '../Modules/navBar.css';
+import { NavLink, Link } from 'react-router-dom';
 
 export default function NavBar({ numItem }) {
   return (
     <div className='navbar'>
-      <h2>BrandName</h2>
       <ul>
-        <li>Links</li>
-        <li>
-          Number Of item: <span className='badge'>{numItem}</span>
-        </li>
+        <NavLink className='link-navbar' to='/movies'>
+          Movies
+        </NavLink>
+        <NavLink className='link-navbar' to='/customers'>
+          Customers{' '}
+        </NavLink>
+        <NavLink className='link-navbar' to='/rental'>
+          Rental
+        </NavLink>
       </ul>
     </div>
   );

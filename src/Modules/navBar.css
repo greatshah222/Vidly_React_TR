@@ -2,11 +2,13 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+  background-color: black;
+  color: white;
+  /* background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%); */
 }
 .navbar ul {
   display: flex;
-  width: 50%;
+  width: 100%;
   justify-content: space-evenly;
   align-items: center;
   list-style: none;
@@ -14,6 +16,19 @@
   font-size: 120%;
   cursor: pointer;
 }
+.link-navbar {
+  text-decoration: none;
+  color: white;
+}
+.link-navbar.active {
+  color: yellow;
+}
+.link-navbar:hover {
+  color: white;
+  margin-top: 1px;
+  border-bottom: 2px solid orangered;
+}
+
 .badge {
   padding: 2px 4px;
   background-color: blue;

@@ -3,6 +3,11 @@ import './App.css';
 import Movies from './components/Movies';
 // import Counters from './components/Counters';
 import NavBar from './components/NavBar';
+import { Route, Switch, Redirect } from 'react-router-dom';
+import Rental from './components/Rental';
+import MovieForm from './components/MovieForm';
+import NotFound from './components/NotFound';
+import Customers from './components/Customers';
 
 class App extends Component {
   state = {
@@ -85,7 +90,7 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <NavBar numItem={this.state.counters.length} />
+        <NavBar />
         {/* <Counters
           counters={this.state.counters}
           onIncrement={this.handleIncrement}
@@ -93,8 +98,19 @@ class App extends Component {
           onDelete={this.handleDelete}
           onReset={this.handleReset}
         /> */}
-
-        <Movies />
+        <Switch>
+          {/* note this /movies/:id should be on top cause this is more specific
+          route. Specific route sholud be placed higher than that of generic
+          routes */}
+          <Route path='/movies/:id' component={MovieForm} />
+          <Route path='/movies' component={Movies} />
+          <Route path='/rental' component={Rental} />
+          <Route path='/customers' component={Customers} />
+          <Route path='/not-found' component={NotFound} />
+          {/* we have to put theexact here in the Redirect from and to cause if there is invalid route in the / it will redirect to /movies */}
+          <Redirect from='/' exact to='/movies' />
+          <Redirect to='/not-found' />
+        </Switch>
       </div>
     );
   }

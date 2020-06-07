@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../Modules/movie.css';
 import { FaSortUp, FaSortDown } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 // as a props should get
 // columns:array
