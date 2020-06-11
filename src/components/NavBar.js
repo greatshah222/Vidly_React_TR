@@ -15,6 +15,9 @@ export default function NavBar({ numItem }) {
         <NavLink className='link-navbar' to='/rental'>
           Rental
         </NavLink>
+        <NavLink className='link-navbar' to='/login'>
+          Login
+        </NavLink>
       </ul>
     </div>
   );

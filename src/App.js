@@ -8,6 +8,7 @@ import Rental from './components/Rental';
 import MovieForm from './components/MovieForm';
 import NotFound from './components/NotFound';
 import Customers from './components/Customers';
+import { LoginForm } from './components/LoginForm';
 
 class App extends Component {
   state = {
@@ -102,9 +103,11 @@ class App extends Component {
           {/* note this /movies/:id should be on top cause this is more specific
           route. Specific route sholud be placed higher than that of generic
           routes */}
+          <Route path='/login' component={LoginForm} />
           <Route path='/movies/:id' component={MovieForm} />
           <Route path='/movies' component={Movies} />
           <Route path='/rental' component={Rental} />
+
           <Route path='/customers' component={Customers} />
           <Route path='/not-found' component={NotFound} />
           {/* we have to put theexact here in the Redirect from and to cause if there is invalid route in the / it will redirect to /movies */}

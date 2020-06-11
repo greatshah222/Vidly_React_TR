@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Movie from './Movie';
 import TableHeader from '../common/TableHeader';
 import '../Modules/movie.css';
+import { Link } from 'react-router-dom';
 
 class tableMovies extends Component {
   // we are initalizing here state and not as a state because it will not be changed through out the lifecycle of this components
@@ -23,6 +24,9 @@ class tableMovies extends Component {
             ? `There are ${this.props.numOfMovie} in the store `
             : 'No movies to display'}
         </p>
+        <Link to='/movies/new' className='save-movie'>
+          Add New movie
+        </Link>
         <table>
           <TableHeader
             columns={this.columns}
